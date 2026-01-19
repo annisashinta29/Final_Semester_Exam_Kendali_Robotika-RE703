@@ -1,0 +1,153 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="delivery_world">
+
+    <!-- LIGHT -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- GROUND -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- ===================== -->
+    <!-- FENCE / SQUARE WALL -->
+    <!-- ===================== -->
+
+    <!-- WALL FRONT -->
+    <model name="wall_front">
+      <static>true</static>
+      <pose>0 5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- WALL BACK -->
+    <model name="wall_back">
+      <static>true</static>
+      <pose>0 -5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- WALL LEFT -->
+    <model name="wall_left">
+      <static>true</static>
+      <pose>-5 0 0.5 0 0 1.57</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- WALL RIGHT -->
+    <model name="wall_right">
+      <static>true</static>
+      <pose>5 0 0.5 0 0 1.57</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ===================== -->
+    <!-- DELIVERY STATES -->
+    <!-- ===================== -->
+
+    <!-- STATE A -->
+    <model name="state_A">
+      <static>true</static>
+      <pose>-3 -3 0.01 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>0.02</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- STATE B -->
+    <model name="state_B">
+      <static>true</static>
+      <pose>3 -3 0.01 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>0.02</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- STATE C -->
+    <model name="state_C">
+      <static>true</static>
+      <pose>0 3 0.01 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <cylinder>
+              <radius>0.3</radius>
+              <length>0.02</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
