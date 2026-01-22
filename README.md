@@ -60,4 +60,5 @@ Saat obstacle terdeteksi:
 - Robot berhenti maju dan berputar
 - Setelah obstacle hilang, robot kembali ke waypoint terdekat
 
+**Video Demonstrasi Robot :** https://youtu.be/9fcslIa3bjM 
 ---
